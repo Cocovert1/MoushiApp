@@ -9,12 +9,14 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/allows_user_to_go_through_different_tabs"
             app:tabBackground="@color/purple_200"
             app:tabGravity="fill"
             app:tabInlineLabel="true"
@@ -26,7 +28,9 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/ViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/appBarLayout" />
+        android:layout_height="684dp"
+        android:layout_above="@+id/appBarLayout"
+        android:layout_marginBottom="0dp"
+        android:contentDescription="@string/allows_for_tabs_to_be_visible" />
 
 </RelativeLayout>

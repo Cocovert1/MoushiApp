@@ -2,4 +2,6 @@
     <string name="app_name">Moushi</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="allows_user_to_go_through_different_tabs">Allows user to go through different tabs</string>
+    <string name="allows_for_tabs_to_be_visible">Allows for tabs to be visible</string>
 </resources>
