@@ -33,6 +33,12 @@ class MainActivity : AppCompatActivity() {
                 2->{
                     tab.setIcon(R.drawable.ic_baseline_rice_bowl_24)
                 }
+                3->{
+                    tab.setIcon(R.drawable.ic_baseline_local_offer_24)
+                }
+                4->{
+                    tab.setIcon(R.drawable.ic_baseline_settings_24)
+                }
             }
         }.attach()
     }
