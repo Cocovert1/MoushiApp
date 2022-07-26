@@ -17,12 +17,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/allows_user_to_go_through_different_tabs"
-            app:tabBackground="@color/purple_200"
+            app:tabBackground="@color/black"
             app:tabGravity="fill"
             app:tabInlineLabel="true"
             app:tabMode="fixed"
             app:tabTextAppearance="@style/CustomTabStyle"
-            app:tabTextColor="@android:color/white" />
+            app:tabIconTint="@color/white"/>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager2.widget.ViewPager2
