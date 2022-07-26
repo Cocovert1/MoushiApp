@@ -25,12 +25,9 @@
             app:tabTextColor="@android:color/white" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/ViewPager"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ViewPager2"
         android:layout_width="match_parent"
-        android:layout_height="684dp"
-        android:layout_above="@+id/appBarLayout"
-        android:layout_marginBottom="0dp"
-        android:contentDescription="@string/allows_for_tabs_to_be_visible" />
+        android:layout_height="684dp"/>
 
 </RelativeLayout>

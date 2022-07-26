@@ -2,29 +2,35 @@ package com.example.moushi.fragments.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import java.util.ArrayList
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.moushi.fragments.CouponFragment
+import com.example.moushi.fragments.HomeFragment
+import com.example.moushi.fragments.MenuFragment
 
-class ViewPagerAdapter(supportFragmentManager: FragmentManager) :
-    FragmentPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
+    FragmentStateAdapter(fragmentManager, lifecycle) {
 
-    private val mFragmentList = ArrayList<Fragment>()
-    private val mFragmentTitleList = ArrayList<String>()
-
-    override fun getCount(): Int {
-        return mFragmentList.size
+    override fun getItemCount(): Int {
+        return 3
     }
 
-    override fun getItem(position: Int): Fragment {
-        return mFragmentList[position]
+    override fun createFragment(position: Int): Fragment {
+        return when(position){
+            0->{
+                HomeFragment()
+            }
+            1->{
+                MenuFragment()
+            }
+            2->{
+                CouponFragment()
+            }
+            else->{
+                Fragment()
+            }
+        }
     }
 
-    override fun getPageTitle(position: Int): CharSequence? {
-        return mFragmentTitleList[position]
-    }
 
-    fun addFragment(fragment: Fragment, title: String){
-        mFragmentList.add(fragment)
-        mFragmentTitleList.add(title)
-    }
 }
